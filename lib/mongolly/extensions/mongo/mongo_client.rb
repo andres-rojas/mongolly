@@ -222,11 +222,11 @@ class Mongo::MongoClient
       end
     end
 
-    if volumes.length > 1
-      with_database_locked(&backup_block)
-    else
+    # if volumes.length > 1
+    #   with_database_locked(&backup_block)
+    # else
       backup_block.call
-    end
+    # end
   end
 
 end
